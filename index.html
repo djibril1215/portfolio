@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Djibril Stein  présentation </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid #263247;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span,
+    h1 span,
+    .accent {
+      color: #63e6be;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #b7c2d3;
+    }
+
+    .nav-links a:hover {
+      color: #63e6be;
+    }
+
+    .hero {
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .eyebrow {
+      color: #63e6be;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .intro,
+    .section-description {
+      color: #b7c2d3;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #63e6be;
+      color: #09251d;
+    }
+
+    .secondary {
+      border: 1px solid #526078;
+    }
+
+    .profile-card,
+    .card,
+    .project,
+    .contact-box {
+      background: #121d30;
+      border: 1px solid #263247;
+      border-radius: 13px;
+      padding: 25px;
+    }
+
+    .profile-card {
+      width: 290px;
+      flex-shrink: 0;
+    }
+
+    .code-icon {
+      font-size: 38px;
+      color: #63e6be;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .profile-card p {
+      padding: 9px 0;
+      border-bottom: 1px solid #263247;
+    }
+
+    .profile-card p:last-child {
+      border-bottom: none;
+    }
+
+    section.content-section {
+      padding: 75px 0;
+    }
+
+    .soft {
+      background: #101a2b;
+      border-top: 1px solid #263247;
+      border-bottom: 1px solid #263247;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card p,
+    .project p {
+      color: #b7c2d3;
+    }
+
+    .project-number {
+      color: #63e6be;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tags span {
+      color: #63e6be;
+      background: #10342d;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: #91a0b6;
+      font-size: 13px;
+    }
+
+    .contact-box {
+      max-width: 750px;
+    }
+
+    .contact-box p {
+      color: #b7c2d3;
+    }
+
+    footer {
+      border-top: 1px solid #263247;
+      padding: 22px 0;
+      color: #b7c2d3;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    footer a:hover {
+      color: #63e6be;
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 10px 16px;
+        font-size: 14px;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 55px;
+      }
+
+      .profile-card {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section.content-section {
+        padding: 55px 0;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#accueil" class="logo">Mon<span>Portfolio</span></a>
+
+      <div class="nav-links">
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <section class="hero container" id="accueil">
+      <div class="hero-content">
+<p> Présentation </p>
+
+        <h1>
+          Bonjour, je suis un
+          <span>développeur informatique.</span>
+        </h1>
+
+        <p class="intro">
+          Je m'intéresse au développement web et mobile,
+          à la conception d'applications et à la cybersécurité.
+          J'améliore mes compétences à travers des projets pratiques
+          et un apprentissage continu.
+        </p>
+
+        <div class="buttons">
+          <a href="#projets" class="button primary">Voir mes projets</a>
+          <a href="#contact" class="button secondary">Me contacter</a>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="code-icon">&lt;/&gt;</div>
+        <p class="eyebrow">MES DOMAINES D'INTÉRÊT</p>
+        <p>Développement web</p>
+        <p>Développement mobile</p>
+        <p>Conception d'applications</p>
+        <p>Pentesting et sécurité réseau</p>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="content-section soft" id="apropos">
+      <div class="container">
+        <p class="eyebrow">À PROPOS</p>
+        <h2>Qui suis-je ?</h2>
+
+        <p class="section-description">
+          Je suis titulaire d'une licence fondamentale en informatique
+          de l'Université de Dschang. Je m'intéresse à la création
+          de solutions informatiques utiles et je continue à développer
+          mes compétences techniques à travers des projets personnels.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="content-section container" id="competences">
+      <p class="eyebrow">MES COMPÉTENCES</p>
+      <h2>Technologies et outils</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Développement web</h3>
+          <p>HTML, CSS, JavaScript, React et Node.js.</p>
+        </article>
+
+        <article class="card">
+          <h3>Bases de données</h3>
+          <p>SQL et PostgreSQL.</p>
+        </article>
+
+        <article class="card">
+          <h3>Développement mobile</h3>
+          <p>Java et Android Studio.</p>
+        </article>
+
+        <article class="card">
+          <h3>Outils et cybersécurité</h3>
+          <p>
+            Git, GitHub, apprentissage de Docker,
+            pentesting et sécurité réseau.
+          </p>
+        </article>
+      </div>
+
+      <p class="note">
+        Mon niveau varie selon les technologies. Je continue à pratiquer
+        pour renforcer mes compétences.
+      </p>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="content-section soft" id="projets">
+      <div class="container">
+        <p class="eyebrow">MES RÉALISATIONS</p>
+        <h2>Quelques projets</h2>
+
+        <div class="grid">
+          <article class="project">
+            <p class="project-number">PROJET 01</p>
+            <h3>MediSys</h3>
+            <p>
+              Projet de plateforme d'interconnexion hospitalière
+              visant à faciliter les échanges d'informations entre
+              établissements de santé, avec une architecture orientée
+              microservices et API.
+            </p>
+
+            <div class="tags">
+              <span>Node.js</span>
+              <span>API</span>
+              <span>PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <p class="project-number">PROJET 02</p>
+            <h3>ActionTrack</h3>
+            <p>
+              Application Android consacrée aux films d'action,
+              avec recherche, consultation des détails et gestion
+              des favoris.
+            </p>
+
+            <div class="tags">
+              <span>Java</span>
+              <span>Android Studio</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+        
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="content-section container" id="contact">
+      <div class="contact-box">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Travaillons ensemble.</h2>
+
+        <p>
+          Tu souhaites échanger sur un projet informatique,
+          une collaboration ou une opportunité ?
+          Tu peux me contacter.
+        </p>
+
+        <p style="margin-top: 18px;">
+          <strong class="accent">WhatsApp :</strong>
+          650809102
+        </p>
+
+        <p style="margin-top: 8px;">
+          <strong class="accent">GitHub :</strong>
+      
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Djibril Einstein </p>
+      <a href="#accueil">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
